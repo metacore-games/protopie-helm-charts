@@ -83,11 +83,16 @@ cloud:
     storageClassName: ""
     # Default accessMode is ReadWriteMany
     accessMode: ""
-    usePVC: true
+    # Enable to use PVCs instead of HostPath volumes
+    usePVC: false
     upload: 50Gi
     logs: 5Gi
     download: 10Gi
     default: 10Gi
+    # If left empty, the default storage class will be used
+    storageClassName: ""
+    # Default accessMode is ReadWriteMany
+    accessMode: ""
   config:
     yml: "you can set content by --set-file cloud.config.yml=config.yml"
   license:
